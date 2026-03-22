@@ -32,15 +32,15 @@ const EducationCard = ({ institution, location, degree, score, date, index }) =>
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="glass-effect p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/40 transition-all mb-6 group"
+    className="glass-effect p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/40 transition-all group"
   >
-    <div className="flex flex-col md:flex-row justify-between mb-4 md:items-start gap-4">
+    <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
       <div>
-        <h3 className="text-xl md:text-2xl font-bold text-blue-200 group-hover:text-blue-300 transition-colors">{institution}</h3>
+        <h3 className="text-xl md:text-2xl font-bold text-textMain group-hover:text-primary transition-colors">{institution}</h3>
         <p className="text-textSecondary text-sm md:text-base mt-1">{location}</p>
       </div>
-      <div className="shrink-0 self-start">
-        <span className="inline-block text-xs md:text-sm font-semibold text-purple-300 bg-purple-900/30 border border-purple-500/20 px-4 py-1.5 rounded-full whitespace-nowrap">
+      <div className="shrink-0">
+        <span className="inline-block text-xs md:text-sm font-semibold text-primary/90 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm">
           {date}
         </span>
       </div>
@@ -61,7 +61,7 @@ export default function Education() {
         subtitle="My academic background and qualifications." 
       />
       
-      <div className="max-w-4xl mx-auto w-full mt-12">
+      <div className="max-w-4xl mx-auto w-full mt-12 space-y-6">
         {EDUCATION_DATA.map((edu, idx) => (
           <EducationCard key={idx} index={idx} {...edu} />
         ))}

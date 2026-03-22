@@ -49,23 +49,26 @@ export default function Hero() {
         
         {/* Profile Avatar */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, type: "spring", stiffness: 60 }}
           className="relative group cursor-pointer mb-2"
         >
           {/* Animated Glow */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple-500 to-blue-400 rounded-full blur opacity-50 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-500"></div>
+          <div className="absolute -inset-2 bg-gradient-to-r from-primary via-purple-500 to-blue-400 rounded-full blur-xl opacity-40 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-700"></div>
           
           {/* Image Container */}
-          <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-card bg-background overflow-hidden flex items-center justify-center shadow-2xl">
-            {/* Replace src with your real photo path (e.g. src="/profile.jpg") */}
+          <motion.div 
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="relative w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-card bg-background overflow-hidden flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.5)] z-10"
+          >
             <img 
               src="profile.jpg" 
               alt="Ambuj Maurya" 
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 bg-white"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 bg-white"
             />
-          </div>
+          </motion.div>
         </motion.div>
 
         {/* Main Headline */}
@@ -73,11 +76,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, type: "spring", stiffness: 50 }}
-          className="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.2] tracking-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tighter"
         >
-        
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-400 to-purple-600 animate-gradient-x">
-            Ambuj Kumar Maurya
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-primary to-purple-600 dark:from-blue-400 dark:via-primary dark:to-purple-500 drop-shadow-sm dark:drop-shadow-[0_5px_15px_rgba(0,0,0,0.9)]">
+            Ambuj Kumar<br className="md:hidden" /> Maurya
           </span>
         </motion.h1>
 

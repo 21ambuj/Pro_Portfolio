@@ -39,7 +39,7 @@ export default function Achievements() {
             <div>
               <h3 className="text-xl font-bold mb-2">{item.title}</h3>
               <p className="text-primary text-sm font-semibold tracking-wide mb-3">{item.organization}</p>
-              <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
+              <p className="text-textSecondary text-sm leading-relaxed">{item.description}</p>
             </div>
           </motion.div>
         ))}

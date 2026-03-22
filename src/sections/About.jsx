@@ -72,9 +72,9 @@ export default function About() {
             icon={Sparkles}
             title="Quick Facts"
             items={[
-              "Location: India",
+              "Location: Mirzapur, Uttar Pradesh, India",
               "Education: B.Tech in CSE (LPU)",
-              "Experience: Student / Developer"
+              "Experience: Fresher / Student"
             ]}
             delay={0.1}
           />

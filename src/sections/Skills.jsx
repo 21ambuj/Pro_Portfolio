@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "../components/SectionWrapper";
+import SectionHeading from "../components/SectionHeading";
 
 import { FaJava, FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt, FaGithub, FaLinux, FaProjectDiagram, FaCubes, FaServer } from "react-icons/fa";
 import { SiJavascript, SiKotlin, SiTailwindcss, SiExpress, SiMysql, SiMongodb, SiAndroidstudio } from "react-icons/si";
@@ -20,7 +21,7 @@ const ALL_SKILLS = [
 
   // Backend
   { name: "Node.js", category: "Backend", percentage: 85, icon: FaNodeJs, color: "text-green-500" },
-  { name: "Express.js", category: "Backend", percentage: 80, icon: SiExpress, color: "text-gray-300" },
+  { name: "Express.js", category: "Backend", percentage: 80, icon: SiExpress, color: "text-textMain" },
   { name: "REST APIs", category: "Backend", percentage: 85, icon: FaServer, color: "text-purple-400" },
 
   // Databases
@@ -30,11 +31,11 @@ const ALL_SKILLS = [
   // Core CS
   { name: "Data Structures", category: "Core CS", percentage: 85, icon: FaProjectDiagram, color: "text-emerald-400" },
   { name: "OOPs", category: "Core CS", percentage: 90, icon: FaCubes, color: "text-pink-400" },
-  { name: "Operating Systems", category: "Core CS", percentage: 75, icon: FaLinux, color: "text-gray-400" },
+  { name: "Operating Systems", category: "Core CS", percentage: 75, icon: FaLinux, color: "text-textMain" },
 
   // Tools
   { name: "Git", category: "Tools", percentage: 85, icon: FaGitAlt, color: "text-orange-500" },
-  { name: "GitHub", category: "Tools", percentage: 90, icon: FaGithub, color: "text-white" },
+  { name: "GitHub", category: "Tools", percentage: 90, icon: FaGithub, color: "text-textMain" },
   { name: "VS Code", category: "Tools", percentage: 95, icon: VscVscode, color: "text-blue-500" },
   { name: "Android Studio", category: "Tools", percentage: 70, icon: SiAndroidstudio, color: "text-green-500" },
 ];
@@ -95,16 +96,11 @@ export default function Skills() {
   return (
     <SectionWrapper id="skills" className="relative">
       
-      {/* Title Section matching the image */}
-      <div className="text-center mb-10 w-full">
-        <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-primary to-purple-500 tracking-tight">
-          Technical Arsenal
-        </h2>
-        <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-purple-500 mx-auto mt-4 rounded-full mb-6"></div>
-        <p className="text-textSecondary text-sm md:text-base font-medium max-w-2xl mx-auto">
-          A showcase of technologies I've mastered on my journey as a developer.
-        </p>
-      </div>
+      {/* Title Section */}
+      <SectionHeading 
+        title="Technical Arsenal" 
+        subtitle="A showcase of technologies I've mastered on my journey as a developer." 
+      />
       
       {/* Category Tabs */}
       <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-3 mb-12 w-full max-w-4xl mx-auto">

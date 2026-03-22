@@ -9,10 +9,12 @@ import Projects from './sections/Projects';
 import Achievements from './sections/Achievements';
 import Certificates from './sections/Certificates';
 import Contact from './sections/Contact';
+import BackgroundEffects from './components/BackgroundEffects';
 
 function App() {
   return (
     <div className="bg-background text-foreground min-h-screen font-sans selection:bg-primary/30 selection:text-white overflow-hidden">
+      <BackgroundEffects />
       <Navbar />
       <main>
         <Hero />

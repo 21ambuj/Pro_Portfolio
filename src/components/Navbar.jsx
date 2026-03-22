@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 
 const NAV_LINKS = [
   { name: 'About', to: 'about' },
@@ -16,6 +17,7 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -32,17 +34,11 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Animated Brand Logo */}
-        <Link to="hero" smooth={true} duration={500} className="text-3xl font-black cursor-pointer group flex items-center">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70 group-hover:from-primary group-hover:to-purple-500 transition-all duration-500">
+        <Link to="hero" smooth={true} duration={500} className="text-2xl font-black tracking-tighter cursor-pointer z-50 group flex items-center">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-textMain to-textSecondary group-hover:from-primary group-hover:to-purple-500 transition-all duration-500">
             AMBUJ
           </span>
-          <motion.span 
-            animate={{ y: [0, -5, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="text-primary ml-1"
-          >
-            .
-          </motion.span>
+          <span className="text-primary ml-1">.</span>
         </Link>
         
         {/* Desktop Nav */}
@@ -67,17 +63,35 @@ export default function Navbar() {
               </Link>
             </motion.div>
           ))}
+          
+          <button 
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+            className="ml-4 p-2.5 rounded-full border border-border/50 bg-card/50 hover:bg-card hover:border-primary/50 transition-all text-textMain shadow-sm"
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
         </div>
 
         {/* Mobile Toggle */}
-        <motion.button 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="md:hidden text-textMain hover:text-primary transition-colors focus:outline-none"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </motion.button>
+        <div className="md:hidden flex items-center gap-4">
+          <button 
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+            className="p-2 rounded-full border border-border/50 bg-card/50 hover:bg-card transition-all text-textMain shadow-sm"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          
+          <motion.button 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-textMain hover:text-primary transition-colors focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </motion.button>
+        </div>
       </div>
 
       {/* Mobile Nav */}

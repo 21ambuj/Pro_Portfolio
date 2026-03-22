@@ -108,7 +108,7 @@ export default function Contact() {
                   name="name"
                   required
                   placeholder="John Doe"
-                  className="bg-black/20 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-white/20"
+                  className="glass-effect rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-textSecondary placeholder:opacity-60"
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -119,7 +119,7 @@ export default function Contact() {
                   name="email"
                   required
                   placeholder="john@example.com"
-                  className="bg-black/20 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-white/20"
+                  className="glass-effect rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-textSecondary placeholder:opacity-60"
                 />
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function Contact() {
                 name="subject"
                 required
                 placeholder="Job Opportunity / Freelance Project"
-                className="bg-black/20 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-white/20"
+                className="glass-effect rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-textSecondary placeholder:opacity-60"
               />
             </div>
             <div className="flex flex-col gap-2">
@@ -142,7 +142,7 @@ export default function Contact() {
                 required
                 rows="5"
                 placeholder="Hello Ambuj, I'd like to talk about..."
-                className="bg-black/20 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-white/20 resize-none"
+                className="glass-effect rounded-lg px-4 py-3 outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all text-textMain placeholder:text-textSecondary placeholder:opacity-60 resize-none"
               ></textarea>
             </div>
             

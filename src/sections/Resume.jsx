@@ -24,7 +24,7 @@ const ResumeCard = ({ type, title, subtitle, date, points, tech }) => (
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -15 }}
     transition={{ duration: 0.3 }}
-    className="glass-effect p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/30 transition-all mb-6 relative overflow-hidden group"
+    className="glass-effect p-6 md:p-8 rounded-2xl border border-border/50 hover:border-primary/30 transition-all relative overflow-hidden group"
   >
     <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
     
@@ -213,10 +213,16 @@ export default function Resume() {
     <SectionWrapper id="resume" className="relative">
       
       {/* Centered Title */}
-      <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-5xl font-black text-textMain tracking-tight">
-          My <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">Resume</span>
-        </h2>
+      <div className="text-center mb-10 w-full z-10 relative">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-primary to-purple-600 dark:from-blue-400 dark:via-primary dark:to-purple-500 tracking-tight drop-shadow-sm dark:drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] pb-1"
+        >
+          My Resume
+        </motion.h2>
         <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-purple-500 mx-auto mt-4 rounded-full"></div>
       </div>
 
@@ -250,7 +256,7 @@ export default function Resume() {
         {/* Tab Content */}
         <div className="min-h-[400px]">
           <AnimatePresence mode="wait">
-            <div key={activeTab}>
+            <div key={activeTab} className="space-y-6">
               {RESUME_DATA[activeTab].map((item, idx) => (
                 <ResumeCard key={idx} {...item} />
               ))}
