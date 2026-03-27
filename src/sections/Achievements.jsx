@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import SectionWrapper from "../components/SectionWrapper";
 import SectionHeading from "../components/SectionHeading";
-import { Award, Trophy } from "lucide-react";
+import { Award, Trophy, Github } from "lucide-react";
 
 export default function Achievements() {
   const achievements = [
@@ -16,6 +16,12 @@ export default function Achievements() {
       organization: "LeetCode, HackerRank & Others",
       description: "Solved 150+ coding problems across LeetCode, HackerRank, and other competitive programming platforms, strengthening problem-solving skills.",
       icon: <Award className="text-primary" size={32} />
+    },
+    {
+      title: "12+ GitHub Projects",
+      organization: "github.com/21ambuj",
+      description: "Developed 12+ open-source projects spanning full-stack web apps, Android apps, and AI integrations — each crafted with clean code, real-world utility, and production-ready quality.",
+      icon: <Github className="text-green-400" size={32} />
     }
   ];
 
@@ -23,7 +29,7 @@ export default function Achievements() {
     <SectionWrapper id="achievements">
       <SectionHeading title="Achievements & Milestones" subtitle="Highlights of my competitive programming and hackathon journey." />
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto w-full">
         {achievements.map((item, idx) => (
           <motion.div
             key={idx}

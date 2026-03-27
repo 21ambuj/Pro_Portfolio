@@ -9,35 +9,35 @@ import { VscVscode } from "react-icons/vsc";
 
 const ALL_SKILLS = [
   // Languages
-  { name: "JavaScript", category: "Languages", percentage: 90, icon: SiJavascript, color: "text-yellow-400" },
-  { name: "HTML", category: "Languages", percentage: 95, icon: FaHtml5, color: "text-orange-500" },
-  { name: "CSS", category: "Languages", percentage: 85, icon: FaCss3Alt, color: "text-blue-500" },
-  { name: "Java", category: "Languages", percentage: 85, icon: FaJava, color: "text-red-500" },
-  { name: "Kotlin", category: "Languages", percentage: 75, icon: SiKotlin, color: "text-purple-500" },
+  { name: "JavaScript", category: "Languages", percentage: 70, icon: SiJavascript, color: "text-yellow-400" },
+  { name: "HTML", category: "Languages", percentage: 80, icon: FaHtml5, color: "text-orange-500" },
+  { name: "CSS", category: "Languages", percentage: 75, icon: FaCss3Alt, color: "text-blue-500" },
+  { name: "Java", category: "Languages", percentage: 65, icon: FaJava, color: "text-red-500" },
+  { name: "Kotlin", category: "Languages", percentage: 60, icon: SiKotlin, color: "text-purple-500" },
 
   // Frontend
-  { name: "React", category: "Frontend", percentage: 90, icon: FaReact, color: "text-cyan-400" },
-  { name: "Tailwind CSS", category: "Frontend", percentage: 85, icon: SiTailwindcss, color: "text-teal-400" },
+  { name: "React", category: "Frontend", percentage: 70, icon: FaReact, color: "text-cyan-400" },
+  { name: "Tailwind CSS", category: "Frontend", percentage: 75, icon: SiTailwindcss, color: "text-teal-400" },
 
   // Backend
-  { name: "Node.js", category: "Backend", percentage: 85, icon: FaNodeJs, color: "text-green-500" },
-  { name: "Express.js", category: "Backend", percentage: 80, icon: SiExpress, color: "text-textMain" },
-  { name: "REST APIs", category: "Backend", percentage: 85, icon: FaServer, color: "text-purple-400" },
+  { name: "Node.js", category: "Backend", percentage: 65, icon: FaNodeJs, color: "text-green-500" },
+  { name: "Express.js", category: "Backend", percentage: 60, icon: SiExpress, color: "text-textMain" },
+  { name: "REST APIs", category: "Backend", percentage: 65, icon: FaServer, color: "text-purple-400" },
 
   // Databases
-  { name: "MySQL", category: "Databases", percentage: 75, icon: SiMysql, color: "text-blue-400" },
-  { name: "MongoDB", category: "Databases", percentage: 80, icon: SiMongodb, color: "text-green-600" },
+  { name: "MySQL", category: "Databases", percentage: 65, icon: SiMysql, color: "text-blue-400" },
+  { name: "MongoDB", category: "Databases", percentage: 70, icon: SiMongodb, color: "text-green-600" },
 
   // Core CS
-  { name: "Data Structures", category: "Core CS", percentage: 85, icon: FaProjectDiagram, color: "text-emerald-400" },
-  { name: "OOPs", category: "Core CS", percentage: 90, icon: FaCubes, color: "text-pink-400" },
-  { name: "Operating Systems", category: "Core CS", percentage: 75, icon: FaLinux, color: "text-textMain" },
+  { name: "Data Structures", category: "Core CS", percentage: 60, icon: FaProjectDiagram, color: "text-emerald-400" },
+  { name: "OOPs", category: "Core CS", percentage: 70, icon: FaCubes, color: "text-pink-400" },
+  { name: "Operating Systems", category: "Core CS", percentage: 65, icon: FaLinux, color: "text-textMain" },
 
   // Tools
-  { name: "Git", category: "Tools", percentage: 85, icon: FaGitAlt, color: "text-orange-500" },
-  { name: "GitHub", category: "Tools", percentage: 90, icon: FaGithub, color: "text-textMain" },
-  { name: "VS Code", category: "Tools", percentage: 95, icon: VscVscode, color: "text-blue-500" },
-  { name: "Android Studio", category: "Tools", percentage: 70, icon: SiAndroidstudio, color: "text-green-500" },
+  { name: "Git", category: "Tools", percentage: 70, icon: FaGitAlt, color: "text-orange-500" },
+  { name: "GitHub", category: "Tools", percentage: 85, icon: FaGithub, color: "text-textMain" },
+  { name: "VS Code", category: "Tools", percentage: 90, icon: VscVscode, color: "text-blue-500" },
+  { name: "Android Studio", category: "Tools", percentage: 80, icon: SiAndroidstudio, color: "text-green-500" },
 ];
 
 const CATEGORIES = ["All Skills", "Languages", "Frontend", "Backend", "Databases", "Core CS", "Tools"];

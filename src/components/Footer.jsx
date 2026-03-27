@@ -48,7 +48,7 @@ export default function Footer() {
 
         {/* Bottom Banner */}
         <div className="mt-12 pt-6 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium text-textSecondary/60">
-          <p>© {new Date().getFullYear()} Ambuj Kumar Maurya. All Rights Reserved.</p>
+          
           <p>
             Designed & Built with <span className="text-primary tracking-wide">React</span> & <span className="text-purple-400 tracking-wide">Tailwind CSS</span>
           </p>
